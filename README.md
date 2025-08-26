@@ -1,16 +1,44 @@
-# recipe_api
+🍽️ Recipe API App
 
-A new Flutter project.
+แอป Flutter สำหรับดึง ตำรับอาหารไทย จาก API และแสดงเมนูอาหาร พร้อมรายละเอียดส่วนผสมและวิธีทำ
 
-## Getting Started
+✨ ฟีเจอร์หลัก
+✅ ดึงข้อมูลตำรับอาหารไทยจาก API
+✅ แสดงรายชื่อเมนูอาหารพร้อมรูปภาพ
+✅ กดดูรายละเอียดเมนู: ส่วนผสม + วิธีทำ
+✅ ออกแบบด้วย Flutter Material Design
 
-This project is a starting point for a Flutter application.
+📦 การติดตั้ง
+Clone โปรเจกต์
+git clone https://github.com/yourusername/recipe_api.git
 
-A few resources to get you started if this is your first Flutter project:
+เข้าสู่โฟลเดอร์โปรเจกต์
+cd recipe_api
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ติดตั้ง dependencies
+flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+รันแอป
+flutter run
+
+API ที่ใช้
+TheMealDB - Thai Recipes
+
+📂 โครงสร้างโปรเจกต์
+lib/
+├── main.dart # จุดเริ่มต้นของแอป
+├── screens/
+│ ├── recipe_screen.dart
+│ ├── recipe_detail_screen.dart
+├── services/
+│ └── api_service.dart
+
+🛠 Dependencies
+Flutter SDK ^3.6.2
+http ^0.13.6
+cupertino_icons ^1.0.8
+
+✅ ตัวอย่างการใช้งาน API
+final response = await http.get(
+Uri.parse('https://www.themealdb.com/api/json/v1/1/filter.php?a=Thai')
+);
